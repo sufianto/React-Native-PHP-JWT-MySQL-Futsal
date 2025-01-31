@@ -1,12 +1,12 @@
-Wayahe Futsal with Login Feature
+# Wayahe Futsal with Login Feature
 This project is based on the Wayahe Futsal system, originally developed by Wahidev Academy. The original source code is available on GitHub: https://github.com/afifbasya
 
-Enhancements
+## Enhancements
 I have added a login feature to improve authentication and user management.
 
-Credits
-Original design and code: https://www.youtube.com/@WahidevAcademy
-Original repository: https://github.com/afifbasya/wayaheFutsal.git
+## Credits
+- Original design and code: https://www.youtube.com/@WahidevAcademy
+- Original repository: https://github.com/afifbasya/wayaheFutsal.git
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
