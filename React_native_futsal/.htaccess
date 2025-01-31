@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Mengizinkan Apache membaca Authorization Header untuk JWT
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+# Mengaktifkan CORS jika dibutuhkan
+Header Set Access-Control-Allow-Origin "*"
+header Set Access-Control-Allow-Credentials "true"
+Header Set Access-Control-Allow-Headers "Authorization, Content-Type"
+Header Set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+
+# Menangani Preflight Request untuk CORS
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=200,L]
+</IfModule>
+
+# Pastikan mod_headers diaktifkan
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
